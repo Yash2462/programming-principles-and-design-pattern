@@ -1,0 +1,27 @@
+Advantages:
+
+- Ensures only one instance of the class exists throughout the application.
+- Provides a global access point to that instance.
+- Useful for shared resources like configuration settings, logging, or thread pools.
+- Can help reduce memory footprint for stateless or shared logic.
+
+Variations:
+
+- Eager Initialization: Instance is created at the time of class loading.
+- Lazy Initialization: Instance is created only when needed (on first access).
+- Thread-safe Singleton: Uses synchronization or double-checked locking for multithreading.
+- Enum Singleton: Uses an enum to implement a singleton in Java (effective and serialization-safe).
+
+Real-world use cases:
+
+- Logging services (e.g., log managers).
+- Configuration or settings managers.
+- Connection pools (e.g., JDBC connection pool).
+- Caches and registries.
+
+Drawbacks:
+
+- Global access can lead to hidden dependencies and tighter coupling.
+- Makes unit testing more difficult due to hidden state.
+- Not suitable when multiple instances are needed (like in multi-tenant apps).
+- Improper implementation can lead to concurrency issues.
