@@ -1,0 +1,23 @@
+Advantages:
+- Improves code readability and maintainability.
+- Avoids constructor parameter confusion (especially with many optional fields).
+- Supports immutability by only exposing getters and making fields final.
+- Allows validation or complex construction logic in the build() method.
+- Makes it easy to add new optional parameters without breaking existing code.
+
+Variations:
+
+- Fluent Builder: Methods return the builder itself for method chaining (as in your example).
+- Immutable Builder: All fields in the built object are final.
+- Nested Builder: Useful for building complex object graphs (e.g., objects containing other objects).
+
+Real-world use cases:
+
+- StringBuilder and StringBuffer in Java standard library.
+- java.lang.ProcessBuilder for building OS processes.
+- Many frameworks (like Lombok’s @Builder annotation) generate builders for you.
+
+Drawbacks:
+
+- More code to write compared to simple constructors (but IDEs can generate much of it).
+- Slightly more complex for very simple objects.
