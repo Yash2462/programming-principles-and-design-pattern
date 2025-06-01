@@ -1,0 +1,31 @@
+Prototype Design Pattern in Java:
+
+        The Prototype pattern is a creational design pattern that allows you to create
+new objects by copying (cloning) existing ones, rather than creating them from scratch.
+It uses a prototypical instance and clones it to produce new objects.
+
+Why is it Required? :
+    - It helps in reducing the cost of creating new objects, especially when object creation is expensive.
+    - It allows for dynamic configuration of objects at runtime.
+    - It can be useful when the exact types and dependencies of objects are not known until runtime.
+
+Advantages:
+    - Reduces the need for subclassing.
+    - Provides a way to create objects without specifying their concrete classes.
+    - Can lead to more flexible and reusable code.
+
+Disadvantages:
+    - Cloning can be complex, especially if the object has deep copy requirements.
+    - Not all objects can be cloned (e.g., objects with final fields).
+    - Requires careful management of object state to ensure that cloned objects are in a valid state.
+
+Real-World Use Cases:
+    - Game development, where you might want to clone characters or items.
+    - GUI frameworks, where components can be cloned to create similar UI elements.
+    - Configuration management systems, where objects can be cloned and modified without affecting the original.
+
+Deep clone vs Shallow clone:
+    - Deep Clone: Creates a new object and recursively copies all objects referenced by the original object.
+    example: if an object contains a list, a deep clone will create a new list and copy all elements into it.
+    - Shallow Clone: Creates a new object but does not copy objects referenced by the original; it copies references instead.
+    example: if an object contains a list, a shallow clone will copy the reference to the same list, not creating a new one.
